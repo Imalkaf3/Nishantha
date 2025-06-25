@@ -3,350 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nishantha | Professional Gardener & Taxi Driver</title>
-    <style>
-        :root {
-            --primary: #2e7d32;
-            --secondary: #ff9800;
-            --light: #f5f5f5;
-            --dark: #212121;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-        }
-        
-        header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('gardening-tuk-tuk.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        
-        .logo {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        nav {
-            background-color: var(--primary);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-        
-        nav li {
-            margin: 0 1rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        section {
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-        }
-        
-        h1, h2, h3 {
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .service-content {
-            padding: 1.5rem;
-        }
-        
-        .testimonials {
-            background-color: var(--primary);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .testimonial-card {
-            background-color: rgba(255,255,255,0.1);
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-        
-        .contact {
-            background-color: white;
-            padding: 3rem 2rem;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-info i {
-            margin-right: 1rem;
-            color: var(--secondary);
-        }
-        
-        form input, form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        footer {
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .social-links {
-            margin: 1rem 0;
-        }
-        
-        .social-links a {
-            color: white;
-            margin: 0 0.5rem;
-            font-size: 1.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav li {
-                margin: 0.5rem 0;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nishantha | Professional Gardening & Tuk-Tuk Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <header>
-        <div class="logo">Nishantha</div>
-        <div class="tagline">Professional Gardening & Reliable Tuk-Tuk Services</div>
-        <a href="#contact" class="btn">Get in Touch</a>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-green-700 shadow-sm fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-white">Nishantha</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white hover:text-orange-300">Home</a>
+                    <a href="#services" class="text-white hover:text-orange-300">Services</a>
+                    <a href="#about" class="text-white hover:text-orange-300">About</a>
+                    <a href="#contact" class="text-white hover:text-orange-300">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-green-800 shadow-lg">
+            <a href="#home" class="block py-3 px-4 text-white hover:bg-green-700">Home</a>
+            <a href="#services" class="block py-3 px-4 text-white hover:bg-green-700">Services</a>
+            <a href="#about" class="block py-3 px-4 text-white hover:bg-green-700">About</a>
+            <a href="#contact" class="block py-3 px-4 text-white hover:bg-green-700">Contact</a>
+        </div>
     </nav>
-    
-    <div class="container">
-        <section id="about">
-            <h2>About Nishantha</h2>
-            <p>With over 10 years of experience in both gardening and transportation services, Nishantha provides reliable, professional services to the community. Whether you need your garden maintained or a safe ride across town, Nishantha delivers quality service with a smile.</p>
-            <p>Known for his attention to detail and punctuality, Nishantha takes pride in transforming outdoor spaces and ensuring comfortable transportation for his clients.</p>
-        </section>
-        
-        <section id="services">
-            <h2>My Services</h2>
-            <div class="services">
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('lawn-mowing.jpg');"></div>
-                    <div class="service-content">
-                        <h3>Lawn Care & Grass Cutting</h3>
-                        <p>Professional lawn mowing, edging, and maintenance to keep your outdoor spaces looking pristine all year round.</p>
-                        <a href="#contact" class="btn">Book Service</a>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 bg-gradient-to-r from-green-600 to-green-800 text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Gardening & <span class="text-orange-300">Tuk-Tuk Services</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Reliable, Affordable, Professional</h2>
+                    <p class="mb-8 max-w-lg">Quality lawn care, gardening services and safe transportation in Colombo and surrounding areas.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition duration-300">Book Now</a>
+                        <a href="#services" class="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-800 transition duration-300">Our Services</a>
                     </div>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('gardening.jpg');"></div>
-                    <div class="service-content">
-                        <h3>Gardening Services</h3>
-                        <p>Complete garden maintenance including weeding, planting, pruning, and seasonal cleanup to enhance your property's beauty.</p>
-                        <a href="#contact" class="btn">Book Service</a>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img" style="background-image: url('tuk-tuk.jpg');"></div>
-                    <div class="service-content">
-                        <h3>Three-Wheel Taxi Service</h3>
-                        <p>Safe, reliable, and affordable transportation for your daily commutes, shopping trips, or special occasions around town.</p>
-                        <a href="#contact" class="btn">Book Ride</a>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-green-200 shadow-lg">
+                        <!-- Replace with Nishantha's image -->
+                        <img src="professional-gardener.jpg" alt="Nishantha" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section class="testimonials" id="testimonials">
-            <h2>What Clients Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="lawn-care.jpg" alt="Lawn Care" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Lawn Care & Grass Cutting</h3>
+                        <p class="text-gray-600 mb-4">Professional lawn mowing, edging, and maintenance to keep your outdoor spaces looking pristine.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Residential</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Commercial</span>
+                        </div>
+                        <a href="#contact" class="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Service</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="gardening-services.jpg" alt="Gardening Services" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Gardening Services</h3>
+                        <p class="text-gray-600 mb-4">Complete garden maintenance including weeding, planting, pruning, and seasonal cleanup.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Planting</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Maintenance</span>
+                        </div>
+                        <a href="#contact" class="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Service</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="tuk-tuk-service.jpg" alt="Tuk-Tuk Service" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Three-Wheel Taxi Service</h3>
+                        <p class="text-gray-600 mb-4">Safe, reliable, and affordable transportation for your daily commutes and shopping trips.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">24/7</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Airport</span>
+                        </div>
+                        <a href="#contact" class="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Book Ride</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">About Nishantha</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 rounded-lg overflow-hidden shadow-lg">
+                        <img src="nishantha-profile.jpg" alt="Nishantha" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Professional Service Provider</h3>
+                    <p class="text-gray-600 mb-6">With over 10 years of experience in both gardening and transportation services, Nishantha provides reliable, professional services to the Colombo community.</p>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">My Commitment</h4>
+                        <p class="text-gray-600 mb-4">I take pride in transforming outdoor spaces and ensuring comfortable transportation for my clients. Known for attention to detail and punctuality, I deliver quality service with a smile.</p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex-1 min-w-[200px]">
+                            <div class="text-green-600 mb-2">
+                                <i class="fas fa-leaf text-2xl"></i>
+                            </div>
+                            <h5 class="font-semibold text-gray-800 mb-1">Gardening</h5>
+                            <p class="text-gray-600 text-sm">Lawn care, planting, maintenance</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex-1 min-w-[200px]">
+                            <div class="text-green-600 mb-2">
+                                <i class="fas fa-taxi text-2xl"></i>
+                            </div>
+                            <h5 class="font-semibold text-gray-800 mb-1">Transportation</h5>
+                            <p class="text-gray-600 text-sm">Safe, reliable tuk-tuk service</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex-1 min-w-[200px]">
+                            <div class="text-green-600 mb-2">
+                                <i class="fas fa-clock text-2xl"></i>
+                            </div>
+                            <h5 class="font-semibold text-gray-800 mb-1">Availability</h5>
+                            <p class="text-gray-600 text-sm">7 days a week, flexible hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-green-700 text-white px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">What Clients Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-green-800 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="client1.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Mrs. Perera</h4>
+                            <p class="text-green-300 text-sm">Colombo 5</p>
+                        </div>
+                    </div>
                     <p>"Nishantha has been maintaining our garden for 3 years. His attention to detail is remarkable and he's always punctual."</p>
-                    <p>- Mrs. Perera, Colombo 5</p>
                 </div>
-                <div class="testimonial-card">
+                
+                <div class="bg-green-800 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="client2.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Mr. Fernando</h4>
+                            <p class="text-green-300 text-sm">Regular Customer</p>
+                        </div>
+                    </div>
                     <p>"The most reliable tuk-tuk driver I know. Always on time and gets me safely to my destination."</p>
-                    <p>- Mr. Fernando, Regular Customer</p>
                 </div>
-                <div class="testimonial-card">
+                
+                <div class="bg-green-800 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="client3.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Silva Family</h4>
+                            <p class="text-green-300 text-sm">Colombo 3</p>
+                        </div>
+                    </div>
                     <p>"Transformed our overgrown yard into a beautiful space. Very reasonable rates too!"</p>
-                    <p>- The Silva Family</p>
                 </div>
             </div>
-        </section>
-        
-        <section class="contact" id="contact">
-            <h2>Contact Nishantha</h2>
-            <div class="contact-grid">
-                <div>
-                    <h3>Get in Touch</h3>
-                    <div class="contact-info">
-                        <i class="fas fa-phone"></i>
-                        <span>+94 76 123 4567</span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <span>nishantha.services@gmail.com</span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Colombo, Sri Lanka</span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-clock"></i>
-                        <span>Available 7am - 7pm, 7 days a week</span>
-                    </div>
-                </div>
-                <div>
-                    <h3>Send a Message</h3>
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="tel" placeholder="Your Phone Number">
-                        <select>
-                            <option>Select Service</option>
-                            <option>Lawn Care</option>
-                            <option>Gardening</option>
-                            <option>Taxi Service</option>
-                            <option>Multiple Services</option>
-                        </select>
-                        <textarea placeholder="Your Message" rows="4"></textarea>
-                        <button type="submit" class="btn">Send Message</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Get In Touch</h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Need gardening services or a reliable ride? Contact Nishantha today!</p>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Your Phone Number">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-2">Service Needed</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option>Select Service</option>
+                                <option>Lawn Care</option>
+                                <option>Gardening</option>
+                                <option>Tuk-Tuk Service</option>
+                                <option>Multiple Services</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300 w-full">Send Message</button>
                     </form>
                 </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-green-600 mt-1 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Location</h4>
+                                    <p class="text-gray-600">Colombo, Sri Lanka</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-green-600 mt-1 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">+94 76 123 4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-green-600 mt-1 mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Working Hours</h4>
+                                    <p class="text-gray-600">7am - 7pm, 7 days a week</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-800 mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 hover:text-green-600">
+                                    <i class="fab fa-whatsapp text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-green-600">
+                                    <i class="fab fa-facebook text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-green-50 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Service Areas</h4>
+                            <p class="text-gray-600">Colombo and surrounding areas including:</p>
+                            <ul class="list-disc list-inside text-gray-600 mt-2">
+                                <li>Colombo 1-15</li>
+                                <li>Dehiwala</li>
+                                <li>Mount Lavinia</li>
+                                <li>Nugegoda</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </div>
-    
-    <footer>
-        <div class="logo">Nishantha</div>
-        <p>Professional Gardening & Tuk-Tuk Services</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fas fa-phone"></i></a>
         </div>
-        <p>&copy; 2023 Nishantha's Services. All rights reserved.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Nishantha</h3>
+                    <p class="text-gray-400">Professional Gardening & Tuk-Tuk Services</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">© 2023 Nishantha's Services. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

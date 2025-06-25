@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishantha | Professional Gardener & Taxi Driver</title>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #ff9800;
+            --light: #f5f5f5;
+            --dark: #212121;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('gardening-tuk-tuk.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        nav {
+            background-color: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .testimonials {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .contact {
+            background-color: white;
+            padding: 3rem 2rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info i {
+            margin-right: 1rem;
+            color: var(--secondary);
+        }
+        
+        form input, form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Nishantha</div>
+        <div class="tagline">Professional Gardening & Reliable Tuk-Tuk Services</div>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="about">
+            <h2>About Nishantha</h2>
+            <p>With over 10 years of experience in both gardening and transportation services, Nishantha provides reliable, professional services to the community. Whether you need your garden maintained or a safe ride across town, Nishantha delivers quality service with a smile.</p>
+            <p>Known for his attention to detail and punctuality, Nishantha takes pride in transforming outdoor spaces and ensuring comfortable transportation for his clients.</p>
+        </section>
+        
+        <section id="services">
+            <h2>My Services</h2>
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('lawn-mowing.jpg');"></div>
+                    <div class="service-content">
+                        <h3>Lawn Care & Grass Cutting</h3>
+                        <p>Professional lawn mowing, edging, and maintenance to keep your outdoor spaces looking pristine all year round.</p>
+                        <a href="#contact" class="btn">Book Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('gardening.jpg');"></div>
+                    <div class="service-content">
+                        <h3>Gardening Services</h3>
+                        <p>Complete garden maintenance including weeding, planting, pruning, and seasonal cleanup to enhance your property's beauty.</p>
+                        <a href="#contact" class="btn">Book Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('tuk-tuk.jpg');"></div>
+                    <div class="service-content">
+                        <h3>Three-Wheel Taxi Service</h3>
+                        <p>Safe, reliable, and affordable transportation for your daily commutes, shopping trips, or special occasions around town.</p>
+                        <a href="#contact" class="btn">Book Ride</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials" id="testimonials">
+            <h2>What Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Nishantha has been maintaining our garden for 3 years. His attention to detail is remarkable and he's always punctual."</p>
+                    <p>- Mrs. Perera, Colombo 5</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The most reliable tuk-tuk driver I know. Always on time and gets me safely to my destination."</p>
+                    <p>- Mr. Fernando, Regular Customer</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Transformed our overgrown yard into a beautiful space. Very reasonable rates too!"</p>
+                    <p>- The Silva Family</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact" id="contact">
+            <h2>Contact Nishantha</h2>
+            <div class="contact-grid">
+                <div>
+                    <h3>Get in Touch</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+94 76 123 4567</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>nishantha.services@gmail.com</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Colombo, Sri Lanka</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-clock"></i>
+                        <span>Available 7am - 7pm, 7 days a week</span>
+                    </div>
+                </div>
+                <div>
+                    <h3>Send a Message</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Your Phone Number">
+                        <select>
+                            <option>Select Service</option>
+                            <option>Lawn Care</option>
+                            <option>Gardening</option>
+                            <option>Taxi Service</option>
+                            <option>Multiple Services</option>
+                        </select>
+                        <textarea placeholder="Your Message" rows="4"></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="logo">Nishantha</div>
+        <p>Professional Gardening & Tuk-Tuk Services</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fas fa-phone"></i></a>
+        </div>
+        <p>&copy; 2023 Nishantha's Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>

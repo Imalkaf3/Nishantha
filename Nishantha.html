@@ -6,6 +6,27 @@
     <title>Nishantha | Professional Gardening & Tuk-Tuk Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    .animate-pulse {
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); opacity: 0.9; }
+        100% { transform: scale(1); }
+    }
+    
+    .hover\:scale-110:hover {
+        transform: scale(1.1);
+    }
+    
+    .transition-transform {
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+    }
+    </style>
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Navigation -->
@@ -46,7 +67,7 @@
                 <div class="md:w-1/2 mb-10 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Gardening & <span class="text-orange-300">Tuk-Tuk Services</span></h1>
                     <h2 class="text-2xl md:text-3xl font-semibold mb-6">Reliable, Affordable, Professional</h2>
-                    <p class="mb-8 max-w-lg">Quality lawn care, gardening services and safe transportation in Colombo and surrounding areas.</p>
+                    <p class="mb-8 max-w-lg">Quality lawn care, gardening services and safe transportation in Marawila and surrounding areas.</p>
                     <div class="flex space-x-4">
                         <a href="#contact-info" class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition duration-300">Contact Now</a>
                         <a href="#services" class="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-800 transition duration-300">Our Services</a>
@@ -61,6 +82,8 @@
             </div>
         </div>
     </section>
+
+    
 
     <!-- Services Section -->
     <section id="services" class="py-20 px-4">
@@ -107,10 +130,11 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Three-Wheel Taxi Service</h3>
-                        <p class="text-gray-600 mb-4">Safe, reliable, and affordable transportation for your daily commutes and shopping trips.</p>
+                        <p class="text-gray-600 mb-4">Safe, reliable, convenient, and affordable transportation for your daily commutes and shopping trips.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">24/7</span>
                             <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Airport</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full hover:scale-110 transition-transform animate-pulse">On Demand</span>
                         </div>
                         <a href="#contact-info" class="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Contact Now</a>
                     </div>
